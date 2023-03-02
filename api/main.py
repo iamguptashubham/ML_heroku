@@ -2,13 +2,13 @@ from flask import Flask, request, jsonify
 import pickle
 import numpy as np
 
-model = pickle.load(open('model1.pkl','rb'))
+model = pickle.load(open('./model1.pkl','rb'))
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Heart Disease Prediction App"
+    return "main"
 
 @app.route('/predict',methods=['POST'])
 
